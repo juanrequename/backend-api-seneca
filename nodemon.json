@@ -1,0 +1,15 @@
+{
+    "restartable": "rs",
+    "ignore": [".git", "node_modules/", "test/", "spec/", "*.map"],
+    "verbose": true,
+    "exec": "tsc --build tsconfig.json && node dist/app.js",
+    "execMap": {
+        "js": "node"
+    },
+    "watch": ["src/"],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js,json",
+    "delay": "2500"
+}

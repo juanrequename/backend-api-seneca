@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  api:
+    entrypoint: npm run debug
+    volumes: 
+      - ./:/app

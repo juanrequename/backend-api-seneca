@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "noUnusedLocals": true,
+        "removeComments": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "esnext",
+        "sourceMap": true,
+        "allowJs": true,
+        "outDir": "dist",
+        "resolveJsonModule": true,
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts", "dist"]
+}

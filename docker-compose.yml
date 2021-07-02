@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo:4
+    restart: unless-stopped
+    volumes:
+      - db:/data/db
+    command: mongod
+
+  redis:
+    image: redis:3.0.7
+    command: redis-server --appendonly yes
+    ports:
+      - 6379:6379
+
+  api:
+    depends_on:
+      - mongo
+    build:
+      dockerfile: DockerfileDev
+      context: .
+    environment:
+      APP_MONGO_HOST: mongo
+      APP_DB_DATABASE: backend_api_dev
+    entrypoint: npm run start
+    ports:
+      - 8080:8080
+volumes:
+  db:
+    driver: local
