@@ -1,0 +1,270 @@
+{
+	"variables": [],
+	"info": {
+		"name": "seneca",
+		"_postman_id": "27bfd56f-3d6f-37b7-b502-1423eb249979",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"description": "",
+			"item": [
+				{
+					"name": "/v1/admin/users",
+					"request": {
+						"url": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/admin/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"user test\",\n\t\"email\": \"test@test.test\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/admin/users",
+					"request": {
+						"url": {
+							"raw": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/admin/users?page=1&pageSize=6",
+							"protocol": "http",
+							"host": [
+								"backendapi-env",
+								"eba-39ii2wnm",
+								"eu-west-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "pageSize",
+									"value": "6",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/admin/courses",
+					"request": {
+						"url": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/admin/courses",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"course test\",\n\t\"description\": \"description test\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/admin/courses",
+					"request": {
+						"url": {
+							"raw": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/admin/courses?page=1&pageSize=6",
+							"protocol": "http",
+							"host": [
+								"backendapi-env",
+								"eba-39ii2wnm",
+								"eu-west-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "pageSize",
+									"value": "6",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/v1/courses/:courseId",
+			"request": {
+				"url": {
+					"raw": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/courses/:courseId",
+					"protocol": "http",
+					"host": [
+						"backendapi-env",
+						"eba-39ii2wnm",
+						"eu-west-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"courses",
+						":courseId"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "courseId",
+							"value": "60def76ee9a13e0007e09f51"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Id",
+						"value": "60def766e9a13e0007e09f50",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/courses/:courseId/sessions/{sessionId}",
+			"request": {
+				"url": {
+					"raw": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/courses/:courseId/sessions/:sessionId",
+					"protocol": "http",
+					"host": [
+						"backendapi-env",
+						"eba-39ii2wnm",
+						"eu-west-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"courses",
+						":courseId",
+						"sessions",
+						":sessionId"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "courseId",
+							"value": "60def76ee9a13e0007e09f51"
+						},
+						{
+							"key": "sessionId",
+							"value": "3fa85f64-5717-4562-b3fc-2c963f66afa61"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Id",
+						"value": "60def766e9a13e0007e09f50",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/courses/:courseId",
+			"request": {
+				"url": {
+					"raw": "http://backendapi-env.eba-39ii2wnm.eu-west-1.elasticbeanstalk.com/v1/courses/:courseId",
+					"protocol": "http",
+					"host": [
+						"backendapi-env",
+						"eba-39ii2wnm",
+						"eu-west-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"courses",
+						":courseId"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "courseId",
+							"value": "60def76ee9a13e0007e09f51"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-User-Id",
+						"value": "60def766e9a13e0007e09f50",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sessionId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"totalModulesStudied\": 2,\n    \"averageScore\": 2,\n    \"timeStudied\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

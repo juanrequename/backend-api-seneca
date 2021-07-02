@@ -5,7 +5,7 @@ info:
   title: 'Stats Service'
   description: 'Provides persistence of stats'
 host: 'localhost:3000'
-basePath: '/'
+basePath: '/v1'
 schemes:
   - 'http'
 consumes:
